@@ -1,0 +1,5 @@
+rootProject.name = 'api-server'
+
+//includeBuild 'eureka-server'
+//includeBuild 'api-gateway'
+//includeBuild 'api-server'
