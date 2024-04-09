@@ -9,10 +9,26 @@ spring:
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/users_db
+    username: mysql_user
+    password: 12345Asd
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+logging:
+  level:
+    org.springframework.security.web: DEBUG
+
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://localhost:8761/eureka
   instance:
     hostname: localhost
     prefer-ip-address: true
+
+auth:
+  secret: t45ugi54gh498fui34nf348fg2b3fi3ugfby4ifu

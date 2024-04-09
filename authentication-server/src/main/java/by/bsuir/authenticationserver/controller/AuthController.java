@@ -1,26 +1,37 @@
 package by.bsuir.authenticationserver.controller;
 
-import by.bsuir.authenticationserver.model.dto.AuthenticationRequest;
+import by.bsuir.authenticationserver.model.dto.AuthRequest;
 import by.bsuir.authenticationserver.model.entity.User;
-import by.bsuir.authenticationserver.service.UserService;
-import jakarta.validation.Valid;
+import by.bsuir.authenticationserver.service.AuthService;
 import lombok.AllArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @AllArgsConstructor
+//@RequestMapping("/auth")
 public class AuthController {
 
-    private final UserService userService;
+    private final AuthService authService;
 
-    @PostMapping(value = "/authenticate")
-    public ResponseEntity<String> authenticateUser(@Valid @RequestBody AuthenticationRequest request) {
-        User user = userService.getUserByEmail(request.getEmail());
-        String password = user.getPassword();
+    @PostMapping("/token")
+    public ResponseEntity<String> token(@RequestBody AuthRequest request) {
+        Optional<User> optional = authService.getUser(request.getEmail());
+        return optional.map(user -> ResponseEntity.ok(authService.generateToken(user.getUsername())))
+                .orElseGet(() -> ResponseEntity.status(HttpStatus.FORBIDDEN).build());
+    }
 
-        return null;
+    @PostMapping("/signup")
+    public String signUp(@RequestBody User user) {
+        return authService.saveUser(user);
+    }
+
+    @GetMapping("/validate")
+    public String validateToken(@RequestParam String token) {
+        authService.validateToken(token); // throws exception
+        return "token is valid";
     }
 }

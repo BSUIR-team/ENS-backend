@@ -5,7 +5,6 @@ plugins {
 }
 
 apply plugin: 'war'
-
 group = 'by.bsuir'
 version = '0.0.1-SNAPSHOT'
 
