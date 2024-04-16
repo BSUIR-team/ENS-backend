@@ -1,2 +1,8 @@
-package by.bsuir.senderserver.config;public class SenderConfig {
+package by.bsuir.senderserver.config;
+
+import org.springframework.context.annotation.Configuration;
+
+@Configuration
+public class SenderConfig {
+
 }
