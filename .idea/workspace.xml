@@ -5,30 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/InvalidTokenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/UserAlreadyExistsException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/dto/TokenResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/entity/Token.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/repository/TokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/TokenService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/config/SenderConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/UserJwtNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/filter/JwtAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/config/AuthConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/NoEntityException.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/UserNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/dto/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/dto/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/dto/UserDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/model/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/AuthService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,52 +116,52 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build EmergencyNotificationSystem.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build api-gateway.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build api-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build authentication-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build sender-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.authentication-server [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.authentication-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.eureka-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.sender-server [:Temp.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ApiServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AuthenticationServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SenderServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.2609582&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build EmergencyNotificationSystem.executor": "Run",
+    "Gradle.Build api-gateway.executor": "Run",
+    "Gradle.Build api-server.executor": "Run",
+    "Gradle.Build authentication-server.executor": "Run",
+    "Gradle.Build sender-server.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.authentication-server [build].executor": "Run",
+    "Gradle.authentication-server [clean].executor": "Run",
+    "Gradle.eureka-server [clean].executor": "Run",
+    "Gradle.sender-server [:Temp.main()].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.ApiServerApplication.executor": "Run",
+    "Spring Boot.AuthenticationServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.SenderServerApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.48390806",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.splitter.proportion": "0.2609582",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -351,6 +337,7 @@
       <workItem from="1713130066068" duration="4339000" />
       <workItem from="1713136971512" duration="199000" />
       <workItem from="1713137182702" duration="19000" />
+      <workItem from="1713270776707" duration="9267000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />
@@ -369,5 +356,16 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple working prototype" />
     <option name="LAST_COMMIT_MESSAGE" value="simple working prototype" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java</url>
+          <line>72</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
