@@ -1,37 +1,35 @@
 package by.bsuir.authenticationserver.controller;
 
 import by.bsuir.authenticationserver.model.dto.AuthRequest;
+import by.bsuir.authenticationserver.model.dto.TokenResponse;
 import by.bsuir.authenticationserver.model.entity.User;
 import by.bsuir.authenticationserver.service.AuthService;
 import lombok.AllArgsConstructor;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.Optional;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
-//@RequestMapping("/auth")
 public class AuthController {
 
     private final AuthService authService;
 
-    @PostMapping("/token")
-    public ResponseEntity<String> token(@RequestBody AuthRequest request) {
-        Optional<User> optional = authService.getUser(request.getEmail());
-        return optional.map(user -> ResponseEntity.ok(authService.generateToken(user.getUsername())))
-                .orElseGet(() -> ResponseEntity.status(HttpStatus.FORBIDDEN).build());
+    @PostMapping("/signup")
+    public ResponseEntity<Boolean> signUp(@RequestBody AuthRequest authRequest) {
+        return ResponseEntity.ok(authService.sighUp(authRequest));
     }
 
-    @PostMapping("/signup")
-    public String signUp(@RequestBody User user) {
-        return authService.saveUser(user);
+    @PostMapping("/authenticate")
+    public ResponseEntity<TokenResponse> authenticate(@RequestBody AuthRequest request) {
+        return ResponseEntity.ok(authService.authenticate(request));
     }
 
     @GetMapping("/validate")
-    public String validateToken(@RequestParam String token) {
-        authService.validateToken(token); // throws exception
-        return "token is valid";
+    public ResponseEntity<Long> validateToken(@AuthenticationPrincipal User user) {
+        return ResponseEntity.ok(user.getId());
     }
 }
