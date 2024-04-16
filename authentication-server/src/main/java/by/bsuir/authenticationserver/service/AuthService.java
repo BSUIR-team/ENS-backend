@@ -54,7 +54,7 @@ public class AuthService implements UserDetailsService {
         }
         User user = loadUserByUsername(authRequest.email());
         tokenService.deletePreviousToken(user);
-        String jwt = jwtService.generateToken(user.getUsername());
+        String jwt = jwtService.generateToken(user);
         tokenService.generateToken(user, jwt);
         return new TokenResponse(jwt);
     }

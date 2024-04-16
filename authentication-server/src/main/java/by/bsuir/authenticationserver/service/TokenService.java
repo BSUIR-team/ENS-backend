@@ -1,18 +1,22 @@
 package by.bsuir.authenticationserver.service;
 
 import by.bsuir.authenticationserver.exception.InvalidTokenException;
+import by.bsuir.authenticationserver.exception.UserJwtNotFoundException;
 import by.bsuir.authenticationserver.model.entity.Token;
 import by.bsuir.authenticationserver.model.entity.User;
 import by.bsuir.authenticationserver.repository.TokenRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Lazy;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
 @Service
-@RequiredArgsConstructor
+@RequiredArgsConstructor(onConstructor = @__(@Lazy))
 public class TokenService {
 
     private final TokenRepository tokenRepository;
     private final JwtService jwtService;
+    private final AuthService authService;
 
     public void generateToken(User user, String jwt) {
         tokenRepository.save(Token.builder()
@@ -38,4 +42,12 @@ public class TokenService {
         }
     }
 
+    public User takeUserFromJwt(String jwt) {
+        String email = jwtService.extractEmail(jwt);
+        try {
+            return authService.loadUserByUsername(email);
+        } catch (UsernameNotFoundException e) {
+            throw new UserJwtNotFoundException(e.getMessage());
+        }
+    }
 }
