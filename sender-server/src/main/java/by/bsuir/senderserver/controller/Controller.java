@@ -19,7 +19,7 @@ public class Controller {
                 System.getenv("TWILIO_PASSWORD")
         );
         Message.creator(
-                new PhoneNumber("+375447429490"),
+                new PhoneNumber("+375292207388"),
                 new PhoneNumber("+12513179103"),
                 message
         ).create();

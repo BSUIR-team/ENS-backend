@@ -5,15 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/UserJwtNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/filter/JwtAuthFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/RouteLocatorConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/TopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/kafka/RecipientListKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/config/AuthConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/config/AuthConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/TokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/src/main/java/by/bsuir/apiserver/ApiServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/src/main/java/by/bsuir/apiserver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-server/src/test/java/by/bsuir/apiserver/ApiServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/test/java/by/bsuir/apiserver/NotificationServerApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -38,6 +54,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/eureka-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/notification-server">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/sender-server">
@@ -84,6 +103,7 @@
         <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -106,7 +126,10 @@
     &quot;accountId&quot;: &quot;6ec7f77d-0751-4738-947f-33786aaea5c9&quot;
   }
 }</component>
-  <component name="KubernetesApiProvider">{}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 5
@@ -116,52 +139,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build EmergencyNotificationSystem.executor": "Run",
-    "Gradle.Build api-gateway.executor": "Run",
-    "Gradle.Build api-server.executor": "Run",
-    "Gradle.Build authentication-server.executor": "Run",
-    "Gradle.Build sender-server.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.authentication-server [build].executor": "Run",
-    "Gradle.authentication-server [clean].executor": "Run",
-    "Gradle.eureka-server [clean].executor": "Run",
-    "Gradle.sender-server [:Temp.main()].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.ApiServerApplication.executor": "Run",
-    "Spring Boot.AuthenticationServerApplication.executor": "Run",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.SenderServerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.48390806",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "settings.editor.splitter.proportion": "0.2609582",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build EmergencyNotificationSystem.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build api-gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build api-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build authentication-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build notification-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build sender-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.authentication-server [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.authentication-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.eureka-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.sender-server [:Temp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SenderServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.2609582&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -261,13 +287,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="api-server.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.apiserver.ApiServerApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AuthenticationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="authentication-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.authenticationserver.AuthenticationServerApplication" />
@@ -278,6 +297,13 @@
     <configuration name="EurekaServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="eureka-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.eurekaserver.EurekaServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="NotificationServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="notification-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.apiserver.NotificationServerApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -301,8 +327,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.127" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.127" />
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
         <option value="jdk-21.0.2-openjdk-21.0.2-49964104c9db-97c1806c" />
       </set>
     </attachedChunks>
@@ -337,7 +363,10 @@
       <workItem from="1713130066068" duration="4339000" />
       <workItem from="1713136971512" duration="199000" />
       <workItem from="1713137182702" duration="19000" />
-      <workItem from="1713270776707" duration="9267000" />
+      <workItem from="1713270776707" duration="12235000" />
+      <workItem from="1713449623476" duration="1599000" />
+      <workItem from="1713451861847" duration="10000" />
+      <workItem from="1713451929198" duration="8790000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />

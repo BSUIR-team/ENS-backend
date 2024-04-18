@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class GatewayConfig {
+public class RouteLocatorConfig {
 
     @Bean
     public RouteLocator routes(RouteLocatorBuilder builder) {
@@ -17,4 +17,5 @@ public class GatewayConfig {
                         .uri("lb://authentication-server"))
                 .build();
     }
+
 }
