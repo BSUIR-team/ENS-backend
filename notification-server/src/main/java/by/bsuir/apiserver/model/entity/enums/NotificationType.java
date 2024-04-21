@@ -1,10 +1,16 @@
 package by.bsuir.apiserver.model.entity.enums;
 
-public enum NotificationType {
-    PHONE,
-    EMAIL;
+import lombok.Getter;
 
-    public String getCode() {
-        return name();
+@Getter
+public enum NotificationType implements EnumEntity {
+    PHONE("PHONE"),
+    EMAIL("EMAIL");
+
+    private final String code;
+
+    NotificationType(String code) {
+        this.code = code;
     }
+
 }

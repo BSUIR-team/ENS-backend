@@ -27,6 +27,11 @@
                   <project path="$PROJECT_DIR$/notification-server" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/recipient-server" name="recipient-server">
+                <projects>
+                  <project path="$PROJECT_DIR$/recipient-server" />
+                </projects>
+              </build>
               <build path="$PROJECT_DIR$/sender-server" name="sender-server">
                 <projects>
                   <project path="$PROJECT_DIR$/sender-server" />
@@ -43,6 +48,7 @@
             <option value="$PROJECT_DIR$/authentication-server" />
             <option value="$PROJECT_DIR$/eureka-server" />
             <option value="$PROJECT_DIR$/notification-server" />
+            <option value="$PROJECT_DIR$/recipient-server" />
             <option value="$PROJECT_DIR$/sender-server" />
           </set>
         </option>
@@ -52,6 +58,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/authentication-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/recipient-server" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/recipient-server" />
           </set>
         </option>
       </GradleProjectSettings>

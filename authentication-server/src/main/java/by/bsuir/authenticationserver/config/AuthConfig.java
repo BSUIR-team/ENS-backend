@@ -35,6 +35,7 @@ public class AuthConfig {
                 .authorizeHttpRequests(auth -> {
                     auth.requestMatchers("/signup", "/authenticate").permitAll();
                     auth.requestMatchers("/validate").authenticated();
+                    auth.anyRequest().authenticated();
                 })
                 .authenticationProvider(authenticationProvider())
                 .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))

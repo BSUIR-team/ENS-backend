@@ -5,31 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/RouteLocatorConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/config/TopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/kafka/RecipientListKafka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/client/RecipientClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/request/NotificationRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/response/NotificationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/EnumEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/EntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/NotificationMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/repository/NotificationRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/util/NotificationStatusConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/src/main/java/by/bsuir/apiserver/ApiServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/src/main/java/by/bsuir/apiserver/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-server/src/test/java/by/bsuir/apiserver/ApiServerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/test/java/by/bsuir/apiserver/NotificationServerApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +51,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/notification-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/recipient-server">
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/sender-server">
@@ -100,10 +97,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Record" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -146,6 +143,7 @@
     &quot;Gradle.Build api-server.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build authentication-server.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build notification-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build recipient-server.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Build sender-server.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.authentication-server [build].executor&quot;: &quot;Run&quot;,
@@ -163,12 +161,13 @@
     &quot;Spring Boot.AuthenticationServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.NotificationServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RecipientServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;Spring Boot.SenderServerApplication.executor&quot;: &quot;Run&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/emergency-notification-system&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -196,11 +195,10 @@
       <set>
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
-        <option value="SpringBootApplicationConfigurationType" />
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.AuthenticationServerApplication">
+  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
     <configuration name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.bsuir.senderserver.config.Temp" />
       <module name="sender-server.main" />
@@ -280,9 +278,15 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="api-gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.apigateway.ApiGatewayApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.bsuir.apigateway.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -308,6 +312,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RecipientServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="recipient-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.recipientserver.RecipientServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SenderServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="sender-server.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.senderserver.SenderServerApplication" />
@@ -317,6 +329,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Gradle.authentication-server [build]" />
         <item itemvalue="Gradle.authentication-server [clean]" />
         <item itemvalue="Application.Temp" />
@@ -367,6 +380,8 @@
       <workItem from="1713449623476" duration="1599000" />
       <workItem from="1713451861847" duration="10000" />
       <workItem from="1713451929198" duration="8790000" />
+      <workItem from="1713475891011" duration="221000" />
+      <workItem from="1713713196393" duration="8408000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />
@@ -381,6 +396,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple working prototype" />

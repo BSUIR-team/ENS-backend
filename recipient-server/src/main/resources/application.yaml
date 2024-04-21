@@ -1,0 +1,23 @@
+server:
+  port: 9002
+  servlet:
+    context-path: /recipients
+
+spring:
+  application:
+    name: recipient-server
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  datasource:
+    url: jdbc:mysql://localhost:3306/recipients_db
+    username: mysql_user
+    password: 12345Asd
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

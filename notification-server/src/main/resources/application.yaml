@@ -1,11 +1,11 @@
 server:
-  port: 9001
+  port: 0
   servlet:
-    context-path: /notification-server
+    context-path: /notifications
 
 spring:
   application:
-    name: api-server
+    name: notification-server
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
@@ -21,6 +21,9 @@ spring:
     url: jdbc:mysql://localhost:3306/notifications_db
     username: mysql_user
     password: 12345Asd
+
+servers:
+  recipient: recipient-server
 
 eureka:
   client:

@@ -1,21 +1,25 @@
 package by.bsuir.apigateway.config;
 
-import org.springframework.cloud.gateway.route.RouteLocator;
-import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
-
-@Configuration
+//@Configuration
 public class RouteLocatorConfig {
 
-    @Bean
-    public RouteLocator routes(RouteLocatorBuilder builder) {
-        return builder.routes()
-                .route("api-server", r -> r.path("/users/**")
-                        .uri("lb://api-server"))
-                .route("authentication-server", r -> r.path("/auth/**")
-                        .uri("lb://authentication-server"))
-                .build();
-    }
+//    private final AuthenticationGatewayFilterFactory filterFactory;
+//
+//    @Autowired
+//    public RouteLocatorConfig(AuthenticationGatewayFilterFactory filterFactory) {
+//        this.filterFactory = filterFactory;
+//    }
+//
+//    @Bean
+//    public RouteLocator routes(RouteLocatorBuilder builder) {
+//        return builder.routes()
+//                .route("", r -> r.path("")
+//                        .filters(f -> f.filters(filterFactory.apply(filterFactory.newConfig())))
+//                        .uri("")
+//                )
+//                .route("", r -> r.path("")
+//                        .uri(""))
+//                .build();
+//    }
 
 }

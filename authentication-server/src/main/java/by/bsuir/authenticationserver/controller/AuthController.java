@@ -1,7 +1,8 @@
 package by.bsuir.authenticationserver.controller;
 
 import by.bsuir.authenticationserver.model.dto.AuthRequest;
-import by.bsuir.authenticationserver.model.dto.TokenResponse;
+import by.bsuir.authenticationserver.model.dto.AuthResponse;
+import by.bsuir.authenticationserver.model.dto.SignUpRequest;
 import by.bsuir.authenticationserver.model.entity.User;
 import by.bsuir.authenticationserver.service.AuthService;
 import lombok.AllArgsConstructor;
@@ -19,12 +20,12 @@ public class AuthController {
     private final AuthService authService;
 
     @PostMapping("/signup")
-    public ResponseEntity<Boolean> signUp(@RequestBody AuthRequest authRequest) {
-        return ResponseEntity.ok(authService.sighUp(authRequest));
+    public ResponseEntity<Boolean> signUp(@RequestBody SignUpRequest signUpRequest) {
+        return ResponseEntity.ok(authService.sighUp(signUpRequest));
     }
 
     @PostMapping("/authenticate")
-    public ResponseEntity<TokenResponse> authenticate(@RequestBody AuthRequest request) {
+    public ResponseEntity<AuthResponse> authenticate(@RequestBody AuthRequest request) {
         return ResponseEntity.ok(authService.authenticate(request));
     }
 

@@ -3,7 +3,8 @@ package by.bsuir.authenticationserver.service;
 import by.bsuir.authenticationserver.exception.UserAlreadyExistsException;
 import by.bsuir.authenticationserver.exception.UserNotFoundException;
 import by.bsuir.authenticationserver.model.dto.AuthRequest;
-import by.bsuir.authenticationserver.model.dto.TokenResponse;
+import by.bsuir.authenticationserver.model.dto.AuthResponse;
+import by.bsuir.authenticationserver.model.dto.SignUpRequest;
 import by.bsuir.authenticationserver.model.entity.User;
 import by.bsuir.authenticationserver.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -26,7 +27,7 @@ public class AuthService implements UserDetailsService {
     private final AuthenticationManager authenticationManager;
     private final TokenService tokenService;
 
-    public Boolean sighUp(AuthRequest request) {
+    public Boolean sighUp(SignUpRequest request) {
         return Optional.of(userRepository.findByEmail(request.email()))
                 .map(user -> {
                     if (user.isPresent()) {
@@ -37,14 +38,14 @@ public class AuthService implements UserDetailsService {
                 })
                 .map(req -> User.builder()
                         .email(request.email())
-                        .username("username")
+                        .username(request.username())
                         .password(passwordEncoder.encode(request.password()))
                         .build())
                 .map(userRepository::saveAndFlush)
                 .isPresent();
     }
 
-    public TokenResponse authenticate(AuthRequest authRequest) {
+    public AuthResponse authenticate(AuthRequest authRequest) {
         try {
             authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(authRequest.email(), authRequest.password())
@@ -56,7 +57,11 @@ public class AuthService implements UserDetailsService {
         tokenService.deletePreviousToken(user);
         String jwt = jwtService.generateToken(user);
         tokenService.generateToken(user, jwt);
-        return new TokenResponse(jwt);
+        return new AuthResponse(
+                user.getUsername(),
+                jwt,
+                "Sample message" // TODO: message
+                );
     }
 
     @Override

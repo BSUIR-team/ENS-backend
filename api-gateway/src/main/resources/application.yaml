@@ -9,6 +9,19 @@ spring:
       discovery:
         locator:
           enabled: true
+      routes:
+        - id: authentication-server
+          uri: lb://authentication-server
+          predicates:
+            - Path=/auth/**
+
+        - id: notification-server
+          uri: lb://notification-server
+          predicates:
+            - Path=/notifications/**
+          filters:
+            - Authentication
+
 
 eureka:
   client:
@@ -19,3 +32,6 @@ eureka:
   instance:
     hostname: localhost
     prefer-ip-address: true
+
+urls:
+  validate: http://localhost:8080/auth/validate
