@@ -1,2 +1,14 @@
-package by.bsuir.apiserver.model.dto.response;public record TemplateResponse() {
+package by.bsuir.apiserver.model.dto.response;
+
+import lombok.Builder;
+
+import java.util.List;
+
+@Builder
+public record TemplateResponse(
+        Long id,
+        String title,
+        String content,
+        List<RecipientResponse> recipientIds
+) {
 }

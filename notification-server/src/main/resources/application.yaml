@@ -24,6 +24,7 @@ spring:
 
 servers:
   recipient: recipient-server
+  template: template-server
 
 eureka:
   client:

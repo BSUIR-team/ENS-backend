@@ -6,7 +6,7 @@ import by.bsuir.apiserver.model.entity.Notification;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface NotificationMapper extends EntityMapper<Notification, NotificationRequest, NotificationResponse> {
 
     @Override

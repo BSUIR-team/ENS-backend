@@ -1,4 +1,4 @@
-package by.bsuir.apiserver.util;
+package by.bsuir.apiserver.utils;
 
 import by.bsuir.apiserver.model.entity.enums.EnumEntity;
 import jakarta.persistence.AttributeConverter;

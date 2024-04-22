@@ -1,6 +1,8 @@
 package by.bsuir.apiserver.client;
 
-//@FeignClient("${servers.recipient}")
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("${servers.recipient}")
 public interface RecipientClient {
 
 
