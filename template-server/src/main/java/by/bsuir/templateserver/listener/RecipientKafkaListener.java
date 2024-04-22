@@ -20,7 +20,11 @@ public class RecipientKafkaListener {
     private final RecipientIdMapper mapper;
 
     @Transactional
-    @KafkaListener(topics = "${spring.kafka.topics.template-update}")
+    @KafkaListener(
+            topics = "#{ '${spring.kafka.topics.template-update}' }",
+            groupId = "emergency",
+            containerFactory = "listenerContainerFactory"
+    )
     public CompletableFuture<Void> listener(TemplateRecipientKafka kafka) {
         switch (kafka.operation()) {
             case REMOVE -> {
