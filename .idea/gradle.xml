@@ -37,6 +37,11 @@
                   <project path="$PROJECT_DIR$/sender-server" />
                 </projects>
               </build>
+              <build path="$PROJECT_DIR$/template-server" name="template-server">
+                <projects>
+                  <project path="$PROJECT_DIR$/template-server" />
+                </projects>
+              </build>
             </builds>
           </compositeBuild>
         </compositeConfiguration>
@@ -50,6 +55,7 @@
             <option value="$PROJECT_DIR$/notification-server" />
             <option value="$PROJECT_DIR$/recipient-server" />
             <option value="$PROJECT_DIR$/sender-server" />
+            <option value="$PROJECT_DIR$/template-server" />
           </set>
         </option>
       </GradleProjectSettings>
@@ -74,6 +80,14 @@
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/sender-server" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$/template-server" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$/template-server" />
           </set>
         </option>
       </GradleProjectSettings>

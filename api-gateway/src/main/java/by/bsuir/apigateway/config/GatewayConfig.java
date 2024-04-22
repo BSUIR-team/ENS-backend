@@ -3,7 +3,6 @@ package by.bsuir.apigateway.config;
 import org.springframework.boot.autoconfigure.http.HttpMessageConverters;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.converter.json.GsonHttpMessageConverter;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.cors.CorsConfiguration;
@@ -27,8 +26,9 @@ public class GatewayConfig {
 //        configuration.setAllowedOrigins(List.of("http://localhost:8080", "http://localhost:8761", "http://26.155.93.159:5173"));
         configuration.setAllowedOrigins(List.of("*"));
         configuration.setAllowedHeaders(List.of("*"));
-        configuration.addAllowedMethod(HttpMethod.DELETE);
-        configuration.addAllowedMethod(HttpMethod.PATCH);
+        configuration.setAllowedMethods(List.of("*"));
+//        configuration.addAllowedMethod(HttpMethod.DELETE);
+//        configuration.addAllowedMethod(HttpMethod.PATCH);
 
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", configuration);

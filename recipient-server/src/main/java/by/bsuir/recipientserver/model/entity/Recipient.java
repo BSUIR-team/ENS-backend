@@ -34,7 +34,6 @@ public class Recipient {
 
     @Column(nullable = false)
     private String email;
-    private String telegramId;
     private String phoneNumber;
 
     @ToString.Exclude

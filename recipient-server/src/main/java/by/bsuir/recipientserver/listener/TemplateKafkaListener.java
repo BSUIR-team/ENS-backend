@@ -6,19 +6,20 @@ import by.bsuir.recipientserver.model.entity.TemplateId;
 import by.bsuir.recipientserver.repository.RecipientRepository;
 import by.bsuir.recipientserver.repository.TemplateIdRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Component
 @RequiredArgsConstructor
-public class KafkaListener {
+public class TemplateKafkaListener {
 
     private final TemplateIdRepository templateIdRepository;
     private final RecipientRepository recipientRepository;
 
     @Transactional
-    @org.springframework.kafka.annotation.KafkaListener(
-            topics = "#{ '${spring.kafka.topics.recipient-update}' }",
+    @KafkaListener(
+            topics = "#{'${spring.kafka.topics.recipient-update}'}",
             groupId = "emergency",
             containerFactory = "listenerContainerFactory"
     )
@@ -35,7 +36,7 @@ public class KafkaListener {
                         kafka.recipientId()
                 )) {
                     templateIdRepository.save(
-                            TemplateId.builder() // TODO: mapper
+                            TemplateId.builder()
                                     .recipient(
                                             Recipient.builder()
                                                     .id(kafka.recipientId())

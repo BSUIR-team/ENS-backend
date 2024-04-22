@@ -5,25 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/client/RecipientClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/request/NotificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/response/NotificationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/EnumEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/EntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/NotificationMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/repository/NotificationRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/util/NotificationStatusConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/controller/RecipientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/exception/RecipientNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/exception/RecipientRegistrationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/client/RecipientClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientIdListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/kafka/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/kafka/TemplateRecipientKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/request/TemplateRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/response/RecipientResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/response/TemplateResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/RecipientId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/Template.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/EntityMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/RecipientIdMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/repository/RecipientIdRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/GatewayFilterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/NotificationServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationStatus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/enums/NotificationType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/listener/KafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/listener/TemplateKafkaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/model/entity/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/model/entity/Recipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/service/RecipientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/service/RecipientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +68,9 @@
       <ProjectState />
     </projectState>
     <projectState path="$PROJECT_DIR$/sender-server">
+      <ProjectState />
+    </projectState>
+    <projectState path="$PROJECT_DIR$/template-server">
       <ProjectState />
     </projectState>
   </component>
@@ -98,9 +112,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Class" />
         <option value="Record" />
         <option value="Interface" />
-        <option value="Class" />
       </list>
     </option>
   </component>
@@ -177,7 +191,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
     &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
     &quot;settings.editor.splitter.proportion&quot;: &quot;0.2609582&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -193,9 +207,22 @@
   <component name="RunDashboard">
     <option name="configurationTypes">
       <set>
+        <option value="Application" />
         <option value="MicronautRunConfigurationType" />
         <option value="QuarkusRunConfigurationType" />
+        <option value="SpringBootApplicationConfigurationType" />
       </set>
+    </option>
+    <option name="hiddenConfigurations">
+      <map>
+        <entry key="Application">
+          <value>
+            <set>
+              <option value="Temp" />
+            </set>
+          </value>
+        </entry>
+      </map>
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
@@ -278,7 +305,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.apigateway.ApiGatewayApplication" />
       <extension name="coverage">
@@ -327,9 +354,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TemplateServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="template-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.templateserver.TemplateServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.ApiGatewayApplication" />
         <item itemvalue="Gradle.authentication-server [build]" />
         <item itemvalue="Gradle.authentication-server [clean]" />
         <item itemvalue="Application.Temp" />
@@ -382,6 +416,10 @@
       <workItem from="1713451929198" duration="8790000" />
       <workItem from="1713475891011" duration="221000" />
       <workItem from="1713713196393" duration="8408000" />
+      <workItem from="1713727821076" duration="19134000" />
+      <workItem from="1713790647644" duration="4559000" />
+      <workItem from="1713803432845" duration="75000" />
+      <workItem from="1713809869965" duration="3330000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />
@@ -411,16 +449,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="simple working prototype" />
     <option name="LAST_COMMIT_MESSAGE" value="simple working prototype" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java</url>
-          <line>72</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

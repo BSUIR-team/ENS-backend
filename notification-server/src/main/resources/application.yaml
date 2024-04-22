@@ -21,6 +21,9 @@ spring:
     url: jdbc:mysql://localhost:3306/notifications_db
     username: mysql_user
     password: 12345Asd
+  jpa:
+    hibernate:
+      ddl-auto: update
 
 servers:
   recipient: recipient-server

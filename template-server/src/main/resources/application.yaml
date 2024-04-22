@@ -1,27 +1,30 @@
 server:
   port: 0
   servlet:
-    context-path: /recipients
+    context-path: /templates
 
 spring:
   application:
-    name: recipient-server
+    name: template-server
   mvc:
     pathmatch:
       matching-strategy: ant_path_matcher
-  datasource:
-    url: jdbc:mysql://localhost:3306/recipients_db
-    username: mysql_user
-    password: 12345Asd
   kafka:
     bootstrap-servers: localhost:9092
     partitions: 3
     topics:
       recipient-update: recipient-updated
       template-update: template-updated
+  datasource:
+    url: jdbc:mysql://localhost:3306/templates_db
+    username: mysql_user
+    password: 12345Asd
   jpa:
     hibernate:
       ddl-auto: update
+
+services:
+  recipient: recipient-service
 
 eureka:
   client:

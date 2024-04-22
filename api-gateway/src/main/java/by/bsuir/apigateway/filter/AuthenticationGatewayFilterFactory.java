@@ -70,10 +70,10 @@ public class AuthenticationGatewayFilterFactory extends AbstractGatewayFilterFac
         return restTemplate.exchange(requestEntity, Long.class); // TODO: WebFlux exception handling
     }
 
-    private ServerHttpRequest addClientIdHeader(Long clientId, ServerWebExchange exchange) {
+    private ServerHttpRequest addClientIdHeader(Long userId, ServerWebExchange exchange) {
         return exchange.getRequest()
                 .mutate()
-                .header("clientId", String.valueOf(clientId))
+                .header("userId", String.valueOf(userId))
                 .build();
     }
 
