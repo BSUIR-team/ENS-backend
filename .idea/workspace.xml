@@ -5,37 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/controller/RecipientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/exception/RecipientNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/exception/RecipientRegistrationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/client/RecipientClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaProducerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientIdListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/kafka/Operation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/kafka/TemplateRecipientKafka.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/request/TemplateRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/response/RecipientResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/dto/response/TemplateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/RecipientId.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/Template.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/EntityMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/RecipientIdMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/repository/RecipientIdRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaTopicConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateRecipientController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/service/TemplateRecipientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/RouteLocatorConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/listener/KafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/listener/TemplateKafkaListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/model/entity/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/model/entity/Recipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/service/RecipientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/service/RecipientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,9 +92,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
-        <option value="Record" />
         <option value="Interface" />
+        <option value="Record" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -150,59 +130,66 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build EmergencyNotificationSystem.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build api-gateway.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build api-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build authentication-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build notification-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build recipient-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Build sender-server.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.authentication-server [build].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.authentication-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.eureka-server [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.sender-server [:Temp.main()].executor&quot;: &quot;Run&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.ApiServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.AuthenticationServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.NotificationServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.RecipientServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;Spring Boot.SenderServerApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/emergency-notification-system&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
-    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
-    &quot;settings.editor.splitter.proportion&quot;: &quot;0.2609582&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Build EmergencyNotificationSystem.executor": "Run",
+    "Gradle.Build api-gateway.executor": "Run",
+    "Gradle.Build api-server.executor": "Run",
+    "Gradle.Build authentication-server.executor": "Run",
+    "Gradle.Build notification-server.executor": "Run",
+    "Gradle.Build recipient-server.executor": "Run",
+    "Gradle.Build sender-server.executor": "Run",
+    "Gradle.Build template-server.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
+    "Gradle.authentication-server [build].executor": "Run",
+    "Gradle.authentication-server [clean].executor": "Run",
+    "Gradle.eureka-server [clean].executor": "Run",
+    "Gradle.sender-server [:Temp.main()].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.ApiGatewayApplication.executor": "Run",
+    "Spring Boot.ApiServerApplication.executor": "Run",
+    "Spring Boot.AuthenticationServerApplication.executor": "Run",
+    "Spring Boot.EurekaServerApplication.executor": "Run",
+    "Spring Boot.NotificationServerApplication.executor": "Run",
+    "Spring Boot.RecipientServerApplication.executor": "Run",
+    "Spring Boot.SenderServerApplication.executor": "Run",
+    "Spring Boot.TemplateServerApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "jdk.selected.JAVA_MODULE": "openjdk-21",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/template-server/src/main/java/by/bsuir/templateserver/exception",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.48390806",
+    "run.configurations.included.in.services": "true",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.splitter.proportion": "0.2609582",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
+}]]></component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vladf\IdeaProjects\EmergencyNotificationSystem\template-server\src\main\java\by\bsuir\templateserver\exception" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -419,7 +406,7 @@
       <workItem from="1713727821076" duration="19134000" />
       <workItem from="1713790647644" duration="4559000" />
       <workItem from="1713803432845" duration="75000" />
-      <workItem from="1713809869965" duration="3330000" />
+      <workItem from="1713809869965" duration="5968000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />

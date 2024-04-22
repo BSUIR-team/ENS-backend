@@ -30,7 +30,7 @@ public class KafkaConsumerConfig {
         properties.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
         properties.put(ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS, JsonDeserializer.class);
         properties.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "by.bsuir.recipientserver.model.dto.kafka.TemplateRecipientKafka");
-        properties.put(JsonDeserializer.TRUSTED_PACKAGES, "by.bsuir.recipientserver");
+        properties.put(JsonDeserializer.TRUSTED_PACKAGES, "by.bsuir.recipientserver.model.dto.kafka");
         properties.put(JsonDeserializer.USE_TYPE_INFO_HEADERS, false);
         return properties;
     }

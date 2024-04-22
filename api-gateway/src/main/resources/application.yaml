@@ -29,6 +29,13 @@ spring:
           filters:
             - Authentication
 
+        - id: template-server
+          uri: lb://template-server
+          predicates:
+            - Path=/templates/**
+          filters:
+            - Authentication
+
 
 eureka:
   client:
