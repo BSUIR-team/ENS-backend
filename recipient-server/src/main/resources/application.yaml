@@ -1,5 +1,5 @@
 server:
-  port: 9002
+  port: 0
   servlet:
     context-path: /recipients
 
@@ -13,6 +13,12 @@ spring:
     url: jdbc:mysql://localhost:3306/recipients_db
     username: mysql_user
     password: 12345Asd
+  kafka:
+    bootstrap-servers: localhost:9092
+    partitions: 3
+    topics:
+      recipient-update: recipient-updated
+      template-update: template-updated
 
 eureka:
   client:
