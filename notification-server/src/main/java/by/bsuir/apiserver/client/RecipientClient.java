@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "${services.recipient}")
+@FeignClient(name = "${servers.recipient}")
 public interface RecipientClient {
 
     @GetMapping("/recipients/{id}")

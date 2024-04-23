@@ -9,7 +9,7 @@ public interface EntityMapper<Entity, RequestDTO, ResponseDTO> {
     @Mapping(target = "id", ignore = true)
     Entity toEntity(RequestDTO requestDTO);
 
-    ResponseDTO toDTO(Entity entity);
+    ResponseDTO toDto(Entity entity);
 
     @Mapping(target = "id", ignore = true)
     Entity updateEntity(RequestDTO requestDTO, @MappingTarget Entity entity);

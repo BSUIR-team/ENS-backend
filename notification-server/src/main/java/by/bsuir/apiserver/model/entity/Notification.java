@@ -50,6 +50,9 @@ public class Notification {
         return this;
     }
 
-
+    public Notification updateCreatedAt() {
+        setCreatedAt(LocalDateTime.now());
+        return this;
+    }
 
 }

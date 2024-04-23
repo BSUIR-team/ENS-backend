@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaTopicConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateRecipientController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/service/TemplateRecipientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/RouteLocatorConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/java/by/bsuir/recipientserver/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/config/KafkaConsumerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/listener/RecipientKafkaListener.java" afterDir="false" />
-    </list>
+    <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -406,7 +394,7 @@
       <workItem from="1713727821076" duration="19134000" />
       <workItem from="1713790647644" duration="4559000" />
       <workItem from="1713803432845" duration="75000" />
-      <workItem from="1713809869965" duration="5968000" />
+      <workItem from="1713809869965" duration="6486000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />

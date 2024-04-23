@@ -6,7 +6,7 @@ import java.util.List;
 
 public record RecipientListKafka(
         List<Long> recipientIds,
-        TemplateResponse templateHistoryResponse,
-        Long clientId
+        TemplateResponse templateResponse,
+        Long userId
 ) {
 }
