@@ -1,5 +1,5 @@
 server:
-  port: 0
+  port: 8094
   servlet:
     context-path: /templates
 
@@ -23,8 +23,8 @@ spring:
     hibernate:
       ddl-auto: update
 
-services:
-  recipient: recipient-service
+servers:
+  recipient: recipient-server
 
 eureka:
   client:

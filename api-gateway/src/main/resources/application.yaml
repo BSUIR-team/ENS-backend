@@ -48,4 +48,4 @@ eureka:
     prefer-ip-address: true
 
 urls:
-  validate: http://localhost:8080/auth/validate
+  validate: http://localhost:8090/auth/validate

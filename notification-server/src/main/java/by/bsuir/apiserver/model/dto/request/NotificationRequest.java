@@ -7,6 +7,8 @@ import lombok.Builder;
 public record NotificationRequest(
         NotificationType type,
         String credential,
+        String title,
+        String content,
         Long recipientId,
         Long userId
 ) {

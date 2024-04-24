@@ -46,10 +46,9 @@ public class NotificationService {
     public String distributeNotifications(Long userId, Long templateId) {
         TemplateResponse templateResponse = templateClient.getTemplateByUserIdAndTemplateId(userId, templateId)
                 .getBody();
-        // TODO: List of IDs
 
         if (templateResponse == null) {
-            return "TODO"; // TODO
+            return "TODO";
         }
 
         List<Long> recipientIds = templateResponse.recipientIds()
@@ -75,7 +74,7 @@ public class NotificationService {
                 .map(mapper::toEntity)
                 .map(notificationRepository::saveAndFlush)
                 .map(mapper::toDto)
-                .orElseThrow(); // TODO
+                .orElseThrow();
     }
 
     public List<NotificationKafka> getNotificationsForRebalancing(Long pendingSec, Long newSec, Integer size) {

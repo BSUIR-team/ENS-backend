@@ -4,7 +4,48 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype" />
+    <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
+      <change afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/ExceptionHandlerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/client/NotificationClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/config/KafkaProducerConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/model/dto/kafka/NotificationKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/model/enums/NotificationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/model/enums/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/task/RenotifyTask.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/client/NotificationClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/listener/SenderKafkaListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/model/dto/kafka/NotificationKafka.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/model/dto/response/NotificationResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/model/enums/NotificationStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/model/enums/NotificationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/service/TwilioService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/controller/NotificationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/controller/NotificationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/listener/NotificationKafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/listener/NotificationKafkaListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/kafka/NotificationKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/kafka/NotificationKafka.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/request/NotificationRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/request/NotificationRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/entity/Notification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/NotificationMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/mapper/NotificationMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/recipient-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/SenderServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/SenderServerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/config/SenderConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/controller/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sender-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/client/RecipientClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/client/RecipientClient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/controller/TemplateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/Template.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/entity/Template.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/TemplateMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/model/mapper/TemplateMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/repository/TemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/repository/TemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/service/TemplateService.java" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/java/by/bsuir/templateserver/service/TemplateService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/template-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/template-server/src/main/resources/application.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +73,9 @@
     <projectState path="$PROJECT_DIR$/notification-server">
       <ProjectState />
     </projectState>
+    <projectState path="$PROJECT_DIR$/rebalancer-server">
+      <ProjectState />
+    </projectState>
     <projectState path="$PROJECT_DIR$/recipient-server">
       <ProjectState />
     </projectState>
@@ -51,21 +95,24 @@
         <task path="$PROJECT_DIR$/authentication-server">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/notification-server">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="authentication-server" type="f1a62948:ProjectNode" />
+                <item name="notification-server" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="authentication-server" type="f1a62948:ProjectNode" />
+                <item name="notification-server" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="authentication-server" type="f1a62948:ProjectNode" />
+                <item name="notification-server" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -80,8 +127,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
         <option value="Record" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -125,6 +172,7 @@
     "Gradle.Build api-server.executor": "Run",
     "Gradle.Build authentication-server.executor": "Run",
     "Gradle.Build notification-server.executor": "Run",
+    "Gradle.Build rebalancer-server.executor": "Run",
     "Gradle.Build recipient-server.executor": "Run",
     "Gradle.Build sender-server.executor": "Run",
     "Gradle.Build template-server.executor": "Run",
@@ -132,6 +180,7 @@
     "Gradle.authentication-server [build].executor": "Run",
     "Gradle.authentication-server [clean].executor": "Run",
     "Gradle.eureka-server [clean].executor": "Run",
+    "Gradle.notification-server [clean].executor": "Run",
     "Gradle.sender-server [:Temp.main()].executor": "Run",
     "RequestMappingsPanelOrder0": "0",
     "RequestMappingsPanelOrder1": "1",
@@ -144,6 +193,7 @@
     "Spring Boot.AuthenticationServerApplication.executor": "Run",
     "Spring Boot.EurekaServerApplication.executor": "Run",
     "Spring Boot.NotificationServerApplication.executor": "Run",
+    "Spring Boot.RebalancerServerApplication.executor": "Run",
     "Spring Boot.RecipientServerApplication.executor": "Run",
     "Spring Boot.SenderServerApplication.executor": "Run",
     "Spring Boot.TemplateServerApplication.executor": "Run",
@@ -151,7 +201,7 @@
     "ignore.virus.scanning.warn.message": "true",
     "jdk.selected.JAVA_MODULE": "openjdk-21",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/template-server/src/main/java/by/bsuir/templateserver/exception",
+    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server/src/main/java/by/bsuir/senderserver/model/dto/response",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -176,8 +226,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\vladf\IdeaProjects\EmergencyNotificationSystem\sender-server\src\main\java\by\bsuir\senderserver\model\dto\response" />
+      <recent name="C:\Users\vladf\IdeaProjects\EmergencyNotificationSystem\rebalancer-server\src\main\java\by\bsuir\rebalancerserver\model\enums" />
       <recent name="C:\Users\vladf\IdeaProjects\EmergencyNotificationSystem\template-server\src\main\java\by\bsuir\templateserver\exception" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="by.bsuir.senderserver.model.dto.response" />
+      <recent name="by.bsuir.senderserver.model.dto.kafka" />
+    </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="toDto" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -200,7 +261,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ApiGatewayApplication">
+  <component name="RunManager" selected="Gradle.notification-server [clean]">
     <configuration name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.bsuir.senderserver.config.Temp" />
       <module name="sender-server.main" />
@@ -280,6 +341,28 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="notification-server [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/notification-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="api-gateway.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.apigateway.ApiGatewayApplication" />
@@ -314,6 +397,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RebalancerServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="rebalancer-server.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="by.bsuir.rebalancerserver.RebalancerServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RecipientServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="recipient-server.main" />
@@ -339,6 +430,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.notification-server [clean]" />
         <item itemvalue="Gradle.authentication-server [build]" />
         <item itemvalue="Gradle.authentication-server [clean]" />
         <item itemvalue="Application.Temp" />
@@ -394,7 +486,9 @@
       <workItem from="1713727821076" duration="19134000" />
       <workItem from="1713790647644" duration="4559000" />
       <workItem from="1713803432845" duration="75000" />
-      <workItem from="1713809869965" duration="6486000" />
+      <workItem from="1713809869965" duration="18651000" />
+      <workItem from="1713892343691" duration="102000" />
+      <workItem from="1713975138980" duration="15540000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />

@@ -11,14 +11,9 @@ import org.mapstruct.Mapping;
 @Mapper(componentModel = "spring")
 public interface TemplateMapper extends EntityMapper<Template, TemplateRequest, TemplateResponse> {
 
-//    TemplateHistory mapToTemplateHistory(Template template);
-
-//    TemplateHistoryResponse mapToTemplateHistoryResponse(TemplateHistory templateHistory);
-
     @Mapping(
             target = "recipientIds",
             expression = "java(recipientClient.receiveRecipientResponseListByTemplateId(template.getUserId(), template.getId()).getBody())"
-
     )
     TemplateResponse mapToResponse(Template template, @Context RecipientClient recipientClient);
 }

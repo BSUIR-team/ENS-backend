@@ -1,0 +1,28 @@
+server:
+  port: 8098
+
+spring:
+  application:
+    name: rebalancer-server
+  kafka:
+    bootstrap-servers: localhost:9092
+    topics:
+      notifications:
+        email: email-notification
+        phone: phone-notification
+
+rebalancer:
+  seconds-before-resend-pending: 5
+  seconds-before-resend-new: 5
+  max-amount-to-fetch: 15
+
+servers:
+  notification: notification-server
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    hostname: localhost
+    prefer-ip-address: true

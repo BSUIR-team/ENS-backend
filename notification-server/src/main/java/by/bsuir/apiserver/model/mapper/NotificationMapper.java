@@ -17,7 +17,7 @@ public interface NotificationMapper extends EntityMapper<Notification, Notificat
     @Mapping(target = "createdAt", ignore = true)
     Notification toEntity(NotificationRequest request);
 
-//    @Mapping(target = "template", expression = "java(templateClient.getTemplateByUserIdAndTemplateId(notification.getUserId(), notification.getTemplateHistoryId()).getBody())")
+//    @Mapping(target = "template", expression = "java(templateClient.getTemplateByUserIdAndTemplateId(notification.getUserId(), notification.getTemplateId()).getBody())")
     NotificationResponse toDto(Notification notification);
 
     NotificationKafka mapToKafka(Notification notification);

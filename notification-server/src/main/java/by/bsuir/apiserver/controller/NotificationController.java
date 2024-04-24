@@ -19,42 +19,42 @@ public class NotificationController {
 
     @PostMapping("/{id}")
     public ResponseEntity<String> notify(
-            @RequestHeader Long clientId,
+            @RequestHeader Long userId,
             @PathVariable("id") Long templateId
     ) {
-        return ResponseEntity.status(OK).body(notificationService.distributeNotifications(clientId, templateId));
+        return ResponseEntity.status(OK).body(notificationService.distributeNotifications(userId, templateId));
     }
 
     @PostMapping("/{id}/sent")
     public ResponseEntity<NotificationResponse> setNotificationAsSent(
-            @RequestHeader Long clientId,
+            @RequestHeader Long userId,
             @PathVariable("id") Long notificationId
     ) {
-        return ResponseEntity.status(OK).body(notificationService.setNotificationAsSent(clientId, notificationId));
+        return ResponseEntity.status(OK).body(notificationService.setNotificationAsSent(userId, notificationId));
     }
 
     @PostMapping("/{id}/error")
     public ResponseEntity<NotificationResponse> setNotificationAsError(
-            @RequestHeader Long clientId,
+            @RequestHeader Long userId,
             @PathVariable("id") Long notificationId
     ) {
-        return ResponseEntity.status(OK).body(notificationService.setNotificationAsError(clientId, notificationId));
+        return ResponseEntity.status(OK).body(notificationService.setNotificationAsError(userId, notificationId));
     }
 
     @PostMapping("/{id}/corrupt")
     public ResponseEntity<NotificationResponse> setNotificationAsCorrupt(
-            @RequestHeader Long clientId,
+            @RequestHeader Long userId,
             @PathVariable("id") Long notificationId
     ) {
-        return ResponseEntity.status(OK).body(notificationService.setNotificationAsCorrupt(clientId, notificationId));
+        return ResponseEntity.status(OK).body(notificationService.setNotificationAsCorrupt(userId, notificationId));
     }
 
     @PostMapping("/{id}/resending")
     public ResponseEntity<NotificationResponse> setNotificationAsResending(
-            @RequestHeader Long clientId,
+            @RequestHeader Long userId,
             @PathVariable("id") Long notificationId
     ) {
-        return ResponseEntity.status(OK).body(notificationService.setNotificationAsResending(clientId, notificationId));
+        return ResponseEntity.status(OK).body(notificationService.setNotificationAsResending(userId, notificationId));
     }
 
     @GetMapping("/")

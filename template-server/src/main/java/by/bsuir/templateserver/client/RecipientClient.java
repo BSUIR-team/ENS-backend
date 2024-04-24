@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 
 import java.util.List;
 
-@FeignClient(name = "${services.recipient}")
+@FeignClient(name = "${servers.recipient}")
 public interface RecipientClient {
 
     @GetMapping(value = "/recipients/{id}")

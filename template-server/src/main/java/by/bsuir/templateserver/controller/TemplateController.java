@@ -8,6 +8,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
 
@@ -31,6 +33,13 @@ public class TemplateController {
             @PathVariable("id") Long templateId
     ) {
         return ResponseEntity.status(OK).body(templateService.get(userId, templateId));
+    }
+
+    @GetMapping("/")
+    public ResponseEntity<List<TemplateResponse>> getAll(
+            @RequestHeader Long userId
+    ) {
+        return ResponseEntity.status(OK).body(templateService.getAll(userId));
     }
 
     @DeleteMapping("/{id}")

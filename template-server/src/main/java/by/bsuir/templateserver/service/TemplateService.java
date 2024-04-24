@@ -1,9 +1,9 @@
 package by.bsuir.templateserver.service;
 
 import by.bsuir.templateserver.client.RecipientClient;
+import by.bsuir.templateserver.exception.TemplateAlreadyExistsException;
 import by.bsuir.templateserver.exception.TemplateCreationException;
 import by.bsuir.templateserver.exception.TemplateNotFoundException;
-import by.bsuir.templateserver.exception.TemplateAlreadyExistsException;
 import by.bsuir.templateserver.model.dto.request.TemplateRequest;
 import by.bsuir.templateserver.model.dto.response.TemplateResponse;
 import by.bsuir.templateserver.model.mapper.TemplateMapper;
@@ -11,6 +11,7 @@ import by.bsuir.templateserver.repository.TemplateRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @RequiredArgsConstructor
@@ -53,5 +54,10 @@ public class TemplateService {
                     return template;
                 })
                 .isPresent();
+    }
+
+    public List<TemplateResponse> getAll(Long userId) {
+        return templateRepository.findByUserId(userId).stream()
+                .map(template -> mapper.mapToResponse(template, recipientClient)).toList();
     }
 }

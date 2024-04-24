@@ -28,7 +28,7 @@ public class Notification {
     private Long recipientId;
 
     private NotificationType type;
-    private String message;
+    private String content;
     private String credential;
 
     @Builder.Default

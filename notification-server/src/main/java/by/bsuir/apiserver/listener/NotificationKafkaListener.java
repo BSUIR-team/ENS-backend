@@ -62,8 +62,8 @@ public class NotificationKafkaListener {
                     continue;
                 }
 
-                sendNotificationByCredential(response::email, NotificationType.EMAIL, response, userId, emailTopic);
-                sendNotificationByCredential(response::phoneNumber, NotificationType.PHONE, response, userId, phoneTopic);
+                sendNotificationByCredential(response::email, NotificationType.EMAIL, response, userId, template, emailTopic);
+                sendNotificationByCredential(response::phoneNumber, NotificationType.PHONE, response, userId, template, phoneTopic);
             }
         };
 
@@ -76,17 +76,20 @@ public class NotificationKafkaListener {
             NotificationType type,
             RecipientResponse recipientResponse,
             Long userId,
+            TemplateResponse templateResponse,
             String topic
     ) {
         String credential = supplier.get();
         if (credential != null) {
             Long notificationId;
             try {
-                notificationId = notificationService.createNotification( // TODO: mapper
+                notificationId = notificationService.createNotification(
                         NotificationRequest.builder()
                                 .type(type)
                                 .credential(credential)
                                 .recipientId(recipientResponse.id())
+                                .title(templateResponse.title())
+                                .content(templateResponse.content())
                                 .userId(userId)
                                 .build()
                 ).id();

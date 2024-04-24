@@ -25,7 +25,6 @@ public class Template {
     private Long id;
 
     private Long userId;
-    private Long responseId;
 
     @Column(nullable = false)
     private String title;
@@ -43,11 +42,6 @@ public class Template {
 
     public Template addUser(Long userId) {
         setUserId(userId);
-        return this;
-    }
-
-    public Template addResponse(Long responseId) {
-        setResponseId(responseId);
         return this;
     }
 
