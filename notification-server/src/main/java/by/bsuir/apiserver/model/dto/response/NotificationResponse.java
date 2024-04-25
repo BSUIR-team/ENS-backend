@@ -11,6 +11,7 @@ public record NotificationResponse(
         Long id,
         NotificationType type,
         String credential,
+        String content,
         NotificationStatus status,
         Integer retryAttempts,
         LocalDateTime createdAt,

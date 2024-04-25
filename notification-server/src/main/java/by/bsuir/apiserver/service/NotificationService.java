@@ -127,11 +127,11 @@ public class NotificationService {
             NotificationStatus status
     ) {
         return notificationRepository.findByIdAndUserId(notificationId, userId)
-                .map(notification -> {
-                    notificationRepository.delete(notification);
-                    return notification;
-                })
-                .map(notificationHistory -> notificationHistory.setNotificationStatus(status))
+//                .map(notification -> {
+//                    notificationRepository.delete(notification);
+//                    return notification;
+//                })
+                .map(notification -> notification.setNotificationStatus(status))
                 .map(notificationRepository::saveAndFlush)
                 .map(mapper::toDto)
                 .orElseThrow(() -> new NotificationNotFoundException(

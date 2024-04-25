@@ -10,6 +10,8 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 @Slf4j
@@ -21,6 +23,8 @@ public class SenderKafkaListener {
     private final TwilioService twilioService;
     private final NotificationClient notificationClient;
     private final Random random = new Random();
+    private final Map<Long, String> sidToNid = new HashMap<>();
+
 
     @Value("${notification.max-retry-attempts}")
     private int maxRetryAttempts;
@@ -59,38 +63,14 @@ public class SenderKafkaListener {
         if (notification.retryAttempts() >= maxRetryAttempts) {
             notificationClient.setNotificationAsError(userId, notificationId);
         } else {
-//            CompletableFuture<ResourceSet<Message>> completableFuture = twilioService.send(notification.credential(), notification.content());
-//            completableFuture.whenComplete((messages, throwable) -> {
-//                if (throwable != null) {
-//                    System.out.println("Чет херня какая-то");
-//                } else {
-//                    messages.forEach(message -> {
-//                        if (message.getStatus().equals(Message.Status.FAILED) ||
-//                                message.getStatus().equals(Message.Status.UNDELIVERED)
-//                        ) {
-//                            System.out.println("Чет не то: " + message.getStatus());
-//                        }
-//                    });
-//                }
-//            });
-//            try {
-//                completableFuture.get().forEach(
-//                        message -> System.out.println("Вот что есть: " + message.getStatus())
-//                );
-//            } catch (Exception e) {
-//                System.out.println("Тут исключение: " + e.getMessage());
-//            }
-            twilioService.send(notification.credential(), notification.content()));
-
-//            if (isSent) {
-//                notificationClient.setNotificationAsSent(userId, notificationId);
-//            } else {
+            Integer code = twilioService.send(notification.credential(), notification.content());
+            if (code == null) {
+                notificationClient.setNotificationAsSent(userId, notificationId);
+            } else {
 //                notificationClient.setNotificationAsResending(userId, notificationId);
-//            }
-        } /*else {
-            notificationClient.setNotificationAsCorrupt(userId, notificationId);
-
-        }*/
+            }
+            System.out.println(code);
+        }
     }
 
     private void log(NotificationKafka notificationKafka) {
@@ -103,7 +83,4 @@ public class SenderKafkaListener {
         );
     }
 
-    private boolean random() {
-        return random.nextInt(100) <= 33;
-    }
 }
