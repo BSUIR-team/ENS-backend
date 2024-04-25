@@ -7,6 +7,7 @@ public record NotificationKafka(
         Long id,
         NotificationType type,
         String credential,
+        String content,
         NotificationStatus status,
         Integer retryAttempts,
         Long userId

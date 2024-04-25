@@ -34,4 +34,13 @@ public class TemplateRecipientController {
     ) {
         return ResponseEntity.status(OK).body(templateRecipientsService.removeRecipients(userId, templateId, request));
     }
+
+    @PutMapping("/{id}/recipients")
+    public ResponseEntity<TemplateResponse> updateRecipients(
+            @RequestHeader Long userId,
+            @PathVariable("id") Long templateId,
+            @RequestBody @Valid RecipientListRequest request
+    ) {
+        return ResponseEntity.status(OK).body(templateRecipientsService.updateRecipients(userId, templateId, request));
+    }
 }

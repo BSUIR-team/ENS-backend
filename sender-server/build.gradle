@@ -34,6 +34,8 @@ dependencies {
     implementation 'org.projectlombok:lombok-mapstruct-binding:0.2.0'
     implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
     implementation 'org.springframework.kafka:spring-kafka'
+//    implementation 'javax.mail:javax.mail-api:1.6.2'
+    implementation 'org.springframework.boot:spring-boot-starter-mail:3.2.5'
 
     compileOnly 'org.projectlombok:lombok'
     providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'

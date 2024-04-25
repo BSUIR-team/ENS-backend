@@ -5,6 +5,7 @@ import by.bsuir.templateserver.exception.TemplateNotFoundException;
 import by.bsuir.templateserver.model.dto.request.RecipientListRequest;
 import by.bsuir.templateserver.model.dto.response.RecipientResponse;
 import by.bsuir.templateserver.model.dto.response.TemplateResponse;
+import by.bsuir.templateserver.model.entity.RecipientId;
 import by.bsuir.templateserver.model.entity.Template;
 import by.bsuir.templateserver.model.mapper.TemplateMapper;
 import by.bsuir.templateserver.repository.RecipientIdRepository;
@@ -15,6 +16,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Optional;
 
 @Slf4j
@@ -48,8 +52,13 @@ public class TemplateRecipientService {
                 log.warn("Recipient {} not found for Client {}", recipientId, userId);
             }
         }
-
-        return mapper.mapToResponse(template, recipientClient);
+        TemplateResponse response = mapper.mapToResponse(template, recipientClient);
+//        try {
+//            Thread.sleep(100);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+        return response;
     }
 
     public TemplateResponse removeRecipients(Long userId, Long templateId, RecipientListRequest request) {
@@ -70,6 +79,36 @@ public class TemplateRecipientService {
         }
 
         templateRepository.save(template);
+        return mapper.mapToResponse(template, recipientClient);
+    }
+
+    public TemplateResponse updateRecipients(Long userId, Long templateId, RecipientListRequest request) {
+
+        List<Long> oldList = recipientIdRepository.findAll().stream()
+                .filter(recipient -> recipient.getTemplate().getId().equals(templateId))
+                .map(RecipientId::getRecipientId)
+                .toList();
+        List<Long> newList = request.recipientIds();
+
+        if (newList == null)
+            newList = new ArrayList<>();
+
+        HashSet<Long> oldSet = new HashSet<>(oldList);
+        HashSet<Long> newSet = new HashSet<>(newList);
+
+        oldSet.removeAll(newList); //toRemove
+        RecipientListRequest delete = new RecipientListRequest(new ArrayList<>(oldSet));
+        newSet.removeAll(oldList); //toAdd
+        RecipientListRequest create = new RecipientListRequest(new ArrayList<>(newSet));
+
+        removeRecipients(userId, templateId, delete);
+        addRecipients(userId, templateId, create);
+
+        Template template = templateRepository.findByIdAndUserId(templateId, userId)
+                .orElseThrow(() -> new TemplateNotFoundException(
+                        String.format("Template with id %s not found for user with id %s", templateId, userId)
+                ));
+
         return mapper.mapToResponse(template, recipientClient);
     }
 }

@@ -9,6 +9,14 @@ spring:
     topics:
       email: email-notification
       phone: phone-notification
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: qwjvwjl@gmail.com
+    password: jpwm cuao vlye ektp
+    properties:
+      mail.smtp.auth: true
+      mail.starttls.enable: true
 
 servers:
   notification: notification-server

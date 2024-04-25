@@ -1,5 +1,6 @@
 package by.bsuir.recipientserver.service;
 
+import by.bsuir.recipientserver.exception.FileException;
 import by.bsuir.recipientserver.exception.RecipientNotFoundException;
 import by.bsuir.recipientserver.exception.RecipientRegistrationException;
 import by.bsuir.recipientserver.model.dto.request.RecipientRequest;
@@ -10,11 +11,16 @@ import by.bsuir.recipientserver.model.mapper.RecipientMapper;
 import by.bsuir.recipientserver.repository.RecipientRepository;
 import by.bsuir.recipientserver.repository.TemplateIdRepository;
 import lombok.RequiredArgsConstructor;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
-import java.util.List;
-import java.util.Optional;
+import java.io.IOException;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
@@ -88,5 +94,40 @@ public class RecipientService {
                 .stream()
                 .map(mapper::toDTO)
                 .toList();
+    }
+
+    public Boolean loadRecipientsFromFile(Long userId, MultipartFile file) {
+        Workbook workbook;
+        try {
+            workbook = new XSSFWorkbook(file.getInputStream());
+        } catch (IOException e) {
+            throw new FileException(
+                    "Corrupted file or invalid file format"
+            );
+        }
+        Map<String, String> error = new HashMap<>();
+        Sheet sheet = workbook.getSheetAt(0);
+        for (int i = 0; i <= sheet.getLastRowNum(); i++) {
+            Row row = sheet.getRow(i);
+            if (row == null) {
+                break;
+            }
+            try {
+                register(
+                        userId,
+                        RecipientRequest.builder()
+                                .name(row.getCell(0).toString())
+                                .email(row.getCell(1).toString())
+                                .phoneNumber(row.getCell(2).toString())
+                                .build()
+                );
+            } catch (RuntimeException e) {
+                error.put(row.getCell(2).toString(), e.getMessage());
+            }
+        }
+        if (!error.isEmpty()) {
+            throw new FileException("Invalid recipient: " + error);
+        }
+        return true;
     }
 }

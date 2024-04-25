@@ -5,10 +5,13 @@ import by.bsuir.recipientserver.model.dto.response.RecipientResponse;
 import by.bsuir.recipientserver.service.RecipientService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
+import java.util.Objects;
 
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.OK;
@@ -65,6 +68,18 @@ public class RecipientController {
             @PathVariable("id") Long templateId
     ) {
         return ResponseEntity.status(OK).body(recipientService.receiveByTemplate(userId, templateId));
+    }
+
+    @PostMapping("/file")
+    public ResponseEntity<Boolean> upload(
+            @RequestHeader Long userId,
+            @RequestPart @Valid MultipartFile file
+    ) {
+        if (!Objects.equals(file.getContentType(), MediaType.APPLICATION_OCTET_STREAM_VALUE)
+                && !Objects.equals(file.getContentType(), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")) {
+            throw new RuntimeException("Invalid file format. Only XLSX files are allowed.");
+        }
+        return ResponseEntity.status(OK).body(recipientService.loadRecipientsFromFile(userId, file));
     }
 
 }
