@@ -50,4 +50,11 @@ public class TokenService {
             throw new UserJwtNotFoundException(e.getMessage());
         }
     }
+
+    public Boolean invalidateToken(String jwt) {
+        Token token = tokenRepository.findByJwt(jwt).orElseThrow();
+        token.setExpired(true);
+        tokenRepository.save(token);
+        return true;
+    }
 }

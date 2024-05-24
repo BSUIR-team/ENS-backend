@@ -10,10 +10,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Random;
-
 @Slf4j
 @Component
 @RequiredArgsConstructor
@@ -22,9 +18,6 @@ public class SenderKafkaListener {
     private final MailService mailService;
     private final TwilioService twilioService;
     private final NotificationClient notificationClient;
-    private final Random random = new Random();
-    private final Map<Long, String> sidToNid = new HashMap<>();
-
 
     @Value("${notification.max-retry-attempts}")
     private int maxRetryAttempts;
@@ -38,16 +31,14 @@ public class SenderKafkaListener {
         log(notification);
         Long userId = notification.userId();
         Long notificationId = notification.id();
+        notificationClient.setNotificationAsSent(userId, notificationId);
         if (notification.retryAttempts() >= maxRetryAttempts) {
             notificationClient.setNotificationAsError(userId, notificationId);
         } else {
 //            notificationClient.setNotificationAsResending(userId, notificationId);
             notificationClient.setNotificationAsSent(userId, notificationId);
             mailService.send(notification.credential(), notification.content());
-        } /*else {
-            notificationClient.setNotificationAsCorrupt(userId, notificationId);
-
-        }*/
+        }
     }
 
     @KafkaListener(
@@ -63,7 +54,8 @@ public class SenderKafkaListener {
         if (notification.retryAttempts() >= maxRetryAttempts) {
             notificationClient.setNotificationAsError(userId, notificationId);
         } else {
-            Integer code = twilioService.send(notification.credential(), notification.content());
+            Integer code = null;
+            code = twilioService.send(notification.credential(), notification.content());
             if (code == null) {
                 notificationClient.setNotificationAsSent(userId, notificationId);
             } else {

@@ -32,3 +32,4 @@ eureka:
 
 auth:
   secret: t45ugi54gh498fui34nf348fg2b3fi3ugfby4ifu
+  lifetime: 86400

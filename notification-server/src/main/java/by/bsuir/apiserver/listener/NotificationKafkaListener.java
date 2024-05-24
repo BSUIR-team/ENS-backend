@@ -97,7 +97,7 @@ public class NotificationKafkaListener {
                 System.out.println("Error creating notification " + recipientResponse.id());
                 return;
             }
-            NotificationResponse response = notificationService.setNotificationAsPending(userId, notificationId);
+            NotificationResponse response = notificationService.setNotificationAsProcessing(userId, notificationId);
             NotificationKafka notificationKafka = mapper.mapToKafka(response);
             kafkaTemplate.send(topic, notificationKafka);
         }

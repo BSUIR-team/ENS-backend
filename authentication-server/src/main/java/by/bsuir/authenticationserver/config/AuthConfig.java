@@ -40,7 +40,6 @@ public class AuthConfig {
                 .authenticationProvider(authenticationProvider())
                 .sessionManagement(config -> config.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)
-//                .logout() TODO: add logout logics
                 .build();
     }
 

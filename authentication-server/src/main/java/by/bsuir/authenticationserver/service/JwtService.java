@@ -22,13 +22,15 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
-//    public static final String ALGORITHM = "HmacSHA256";
     private final MacAlgorithm algorithm = Jwts.SIG.HS256;
     private final Key key = algorithm.key().build();
     private SecretKeySpec secretKey;
 
     @Value("${auth.secret}")
     private String secret;
+
+    @Value("${auth.lifetime}")
+    private Integer lifetime;
 
     public Boolean validateToken(final String token) {
         try {
@@ -50,7 +52,7 @@ public class JwtService {
                 .claims(new HashMap<>())
                 .subject(user.getEmail())
                 .issuedAt(new Date(System.currentTimeMillis()))
-                .expiration(new Date(System.currentTimeMillis() + 1000 * 60 * 3000))
+                .expiration(new Date(System.currentTimeMillis() + 1000L * lifetime))
                 .signWith(getSignKey())
                 .compact();
     }

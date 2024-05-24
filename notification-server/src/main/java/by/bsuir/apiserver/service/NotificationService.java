@@ -16,6 +16,7 @@ import by.bsuir.apiserver.repository.NotificationRepository;
 import by.bsuir.apiserver.utils.CollectionUtils;
 import by.bsuir.apiserver.utils.NodeChecker;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Pageable;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -27,6 +28,7 @@ import java.util.Optional;
 
 import static java.time.temporal.ChronoUnit.SECONDS;
 
+@Slf4j
 @Service
 @RequiredArgsConstructor
 public class NotificationService {
@@ -61,6 +63,7 @@ public class NotificationService {
             );
         }
 
+        System.out.println(nodeChecker.getAmountOfRunningNodes(applicationName));
         for (List<Long> recipients : CollectionUtils.splitList(recipientIds, nodeChecker.getAmountOfRunningNodes(applicationName))) {
             RecipientListKafka listKafka = new RecipientListKafka(recipients, templateResponse, userId);
             kafkaTemplate.send(recipientListDistributionTopic, listKafka);
@@ -91,6 +94,10 @@ public class NotificationService {
 
     public NotificationResponse setNotificationAsSent(Long userId, Long notificationId) {
         return setNotificationAsExecutedWithGivenStatus(userId, notificationId, NotificationStatus.SENT);
+    }
+
+    public NotificationResponse setNotificationAsProcessing(Long userId, Long notificationId) {
+        return setNotificationAsExecutedWithGivenStatus(userId, notificationId, NotificationStatus.IN_PROCESS);
     }
 
     public NotificationResponse setNotificationAsError(Long userId, Long notificationId) {

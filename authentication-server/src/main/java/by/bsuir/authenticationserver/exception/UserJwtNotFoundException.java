@@ -7,4 +7,5 @@ public class UserJwtNotFoundException extends JwtException {
     public UserJwtNotFoundException(String message) {
         super(message);
     }
+
 }

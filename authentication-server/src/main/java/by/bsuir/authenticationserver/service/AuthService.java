@@ -60,8 +60,12 @@ public class AuthService implements UserDetailsService {
         return new AuthResponse(
                 user.getUsername(),
                 jwt,
-                "Sample message" // TODO: message
+                "Sample message"
                 );
+    }
+
+    public Boolean logout(String jwt) {
+        return tokenService.invalidateToken(jwt);
     }
 
     @Override
