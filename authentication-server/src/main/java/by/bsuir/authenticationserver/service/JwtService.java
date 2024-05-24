@@ -31,13 +31,16 @@ public class JwtService {
     private String secret;
 
     public Boolean validateToken(final String token) {
-        JwtParser parser = Jwts.parser()
-                .verifyWith(getSignKey())
-                .build();
         try {
+            JwtParser parser = Jwts.parser()
+                    .verifyWith(getSignKey())
+                    .build();
             parser.parseSignedClaims(token);
         } catch (Exception e) {
-            throw new JwtException("Invalid JWT token");
+            throw new JwtException(String.format("Invalid JWT token: %s", token), e);
+        }
+        if (isExpired(token)) {
+            throw new JwtException(String.format("JWT token '%s' is expired", token));
         }
         return true;
     }

@@ -4,12 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.RequestEntity;
-import org.springframework.http.ResponseEntity;
+import org.springframework.http.*;
 import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.stereotype.Component;
+import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.server.ServerWebExchange;
 
@@ -45,14 +43,20 @@ public class AuthenticationGatewayFilterFactory extends AbstractGatewayFilterFac
             if (isSecure.test(exchange.getRequest())) {
                 ResponseEntity<Long> responseEntity = sendValidationRequest(exchange);
                 if (responseEntity.getStatusCode().is2xxSuccessful()) {
-                    ServerHttpRequest request = addClientIdHeader(responseEntity.getBody(), exchange);
+                    ServerHttpRequest request = addUserIdHeader(responseEntity.getBody(), exchange);
                     return chain.filter(
                             exchange.mutate()
                                     .request(request)
                                     .build()
                     );
                 } else {
-                    throw new RuntimeException("Request failed with status code: " + responseEntity.getStatusCode());
+//                    throw new RuntimeException("Request failed with status code: " + responseEntity.getStatusCode());
+                    System.out.println("Authentication Failed");
+                    exchange.getResponse().setRawStatusCode(HttpStatus.UNAUTHORIZED.value());
+                    return chain.filter(
+                            exchange.mutate()
+                                    .build()
+                    );
                 }
             }
             return chain.filter(
@@ -67,10 +71,14 @@ public class AuthenticationGatewayFilterFactory extends AbstractGatewayFilterFac
         String jwt = exchange.getRequest().getHeaders().getFirst("Authorization");
         headers.set("Authorization", jwt);
         RequestEntity<Void> requestEntity = new RequestEntity<>(headers, HttpMethod.GET, URI.create(validateUrl));
-        return restTemplate.exchange(requestEntity, Long.class);
+        try {
+            return restTemplate.exchange(requestEntity, Long.class);
+        } catch (RestClientException e) {
+            return new ResponseEntity<>(HttpStatusCode.valueOf(401));
+        }
     }
 
-    private ServerHttpRequest addClientIdHeader(Long userId, ServerWebExchange exchange) {
+    private ServerHttpRequest addUserIdHeader(Long userId, ServerWebExchange exchange) {
         return exchange.getRequest()
                 .mutate()
                 .header("userId", String.valueOf(userId))

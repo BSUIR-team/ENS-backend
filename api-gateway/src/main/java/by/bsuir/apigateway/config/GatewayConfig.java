@@ -36,18 +36,6 @@ public class GatewayConfig {
         return new CorsWebFilter(source);
     }
 
-//    @Bean
-//    public CorsConfigurationSource corsConfigurationSource() {
-//        CorsConfiguration configuration = new CorsConfiguration();
-//        configuration.setAllowedOrigins(List.of("*"));
-//        configuration.setAllowedMethods(List.of("*"));
-//        configuration.setAllowedHeaders(List.of("*"));
-//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//        source.registerCorsConfiguration("/**", configuration);
-//        return source;
-//    }
-
-
     @Bean
     public HttpMessageConverters httpMessageConverters() {
         return new HttpMessageConverters(new GsonHttpMessageConverter());

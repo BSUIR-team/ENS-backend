@@ -6,12 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="196e10c9-112a-4a7f-bc07-1ec5977d36a6" name="Changes" comment="simple working prototype">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/config/GatewayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/api-gateway/src/main/java/by/bsuir/apigateway/filter/AuthenticationGatewayFilterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/ExceptionHandlerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/exception/ExceptionHandlerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/filter/JwtAuthFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/filter/JwtAuthFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authentication-server/src/main/java/by/bsuir/authenticationserver/service/JwtService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/response/NotificationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/model/dto/response/NotificationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/notification-server/src/main/java/by/bsuir/apiserver/service/NotificationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/model/dto/kafka/NotificationKafka.java" beforeDir="false" afterPath="$PROJECT_DIR$/rebalancer-server/src/main/java/by/bsuir/rebalancerserver/model/dto/kafka/NotificationKafka.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/listener/SenderKafkaListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/listener/SenderKafkaListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/service/TwilioService.java" beforeDir="false" afterPath="$PROJECT_DIR$/sender-server/src/main/java/by/bsuir/senderserver/service/TwilioService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,21 +64,24 @@
         <task path="$PROJECT_DIR$/notification-server">
           <activation />
         </task>
+        <task path="$PROJECT_DIR$/recipient-server">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="notification-server" type="f1a62948:ProjectNode" />
+                <item name="recipient-server" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="notification-server" type="f1a62948:ProjectNode" />
+                <item name="recipient-server" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="notification-server" type="f1a62948:ProjectNode" />
+                <item name="recipient-server" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
@@ -132,63 +134,64 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build EmergencyNotificationSystem.executor": "Run",
-    "Gradle.Build api-gateway.executor": "Run",
-    "Gradle.Build api-server.executor": "Run",
-    "Gradle.Build authentication-server.executor": "Run",
-    "Gradle.Build notification-server.executor": "Run",
-    "Gradle.Build rebalancer-server.executor": "Run",
-    "Gradle.Build recipient-server.executor": "Run",
-    "Gradle.Build sender-server.executor": "Run",
-    "Gradle.Build template-server.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.EmergencyNotificationSystem [:sender-server:Test.main()].executor": "Run",
-    "Gradle.authentication-server [build].executor": "Run",
-    "Gradle.authentication-server [clean].executor": "Run",
-    "Gradle.eureka-server [clean].executor": "Run",
-    "Gradle.notification-server [clean].executor": "Run",
-    "Gradle.sender-server [:Temp.main()].executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.ApiGatewayApplication.executor": "Run",
-    "Spring Boot.ApiServerApplication.executor": "Run",
-    "Spring Boot.AuthenticationServerApplication.executor": "Run",
-    "Spring Boot.EurekaServerApplication.executor": "Run",
-    "Spring Boot.NotificationServerApplication.executor": "Run",
-    "Spring Boot.RebalancerServerApplication.executor": "Run",
-    "Spring Boot.RecipientServerApplication.executor": "Run",
-    "Spring Boot.SenderServerApplication.executor": "Run",
-    "Spring Boot.TemplateServerApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "jdk.selected.JAVA_MODULE": "openjdk-21",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server/src/main/java/by/bsuir/senderserver/model/dto/response",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.48390806",
-    "run.configurations.included.in.services": "true",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
-    "settings.editor.splitter.proportion": "0.2609582",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build EmergencyNotificationSystem.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build api-gateway.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build api-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build authentication-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build notification-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build rebalancer-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build recipient-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build sender-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build template-server.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.EmergencyNotificationSystem [:sender-server:Test.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.authentication-server [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.authentication-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.eureka-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.notification-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.recipient-server [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.sender-server [:Temp.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthenticationServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EurekaServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.NotificationServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RebalancerServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.RecipientServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.SenderServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.TemplateServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;openjdk-21&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/vladf/IdeaProjects/EmergencyNotificationSystem/sender-server/src/main/java/by/bsuir/senderserver/model/dto/response&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.48390806&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;settings.editor.splitter.proportion&quot;: &quot;0.2609582&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
@@ -217,20 +220,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
-    <configuration name="Temp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="by.bsuir.senderserver.config.Temp" />
-      <module name="sender-server.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.bsuir.senderserver.config.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.recipient-server [clean]">
     <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.bsuir.senderserver.service.Test" />
       <module name="sender-server.main" />
@@ -292,6 +282,28 @@
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/notification-server" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="recipient-server [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/recipient-server" />
         <option name="externalSystemIdString" value="GRADLE" />
         <option name="scriptParameters" />
         <option name="taskDescriptions">
@@ -377,11 +389,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.recipient-server [clean]" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Gradle.notification-server [clean]" />
         <item itemvalue="Gradle.authentication-server [build]" />
         <item itemvalue="Gradle.authentication-server [clean]" />
-        <item itemvalue="Application.Temp" />
       </list>
     </recent_temporary>
   </component>
@@ -437,6 +449,15 @@
       <workItem from="1713892343691" duration="102000" />
       <workItem from="1713975138980" duration="36751000" />
       <workItem from="1714014500119" duration="10437000" />
+      <workItem from="1714026435011" duration="119000" />
+      <workItem from="1714030951672" duration="10000" />
+      <workItem from="1714031910227" duration="518000" />
+      <workItem from="1714032770324" duration="13000" />
+      <workItem from="1714040327710" duration="4652000" />
+      <workItem from="1714424089839" duration="4153000" />
+      <workItem from="1714574528112" duration="14000" />
+      <workItem from="1714575441251" duration="963000" />
+      <workItem from="1714644984284" duration="238000" />
     </task>
     <task id="LOCAL-00001" summary="simple working prototype">
       <option name="closed" value="true" />
